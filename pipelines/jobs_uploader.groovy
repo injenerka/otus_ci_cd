@@ -11,7 +11,7 @@ def JOBS_DIR = "./jobs"
 
 node() {
 
-    currentBuild.description = "<h3 style='color: red;'>Jobs uploader</h3>"
+    currentBuild.description = "<p style='color: red;'>Jobs uploader</p>"
 
     stage('Checkout') {
         checkout scm
