@@ -9,7 +9,7 @@ def JENKINS_HOSTNAME = 'http://188.130.251.59'
 @Field
 def JOBS_DIR = "./jobs"
 
-node('мастер') {
+node() {
 
     currentBuild.description = "<h3 style='color: red;'>Jobs uploader</h3>"
 
