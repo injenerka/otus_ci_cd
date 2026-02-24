@@ -9,7 +9,7 @@ def JENKINS_HOSTNAME = 'http://188.130.251.59'
 @Field
 def JOBS_DIR = "./jobs"
 
-node() {
+node("maven") {
 
     currentBuild.description = "<p style='color: red;'>Jobs uploader</p>"
 
@@ -34,9 +34,6 @@ EOF"""
     }
 
     stage('Deploy jobs to jenkins') {
-
-        sh "cat $CONF_FILE"
-
         sh "jenkins-jobs --conf $CONF_FILE --flush-cache update $JOBS_DIR"
     }
 }
