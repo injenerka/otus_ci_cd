@@ -34,6 +34,9 @@ EOF"""
     }
 
     stage('Deploy jobs to jenkins') {
+
+        sh "cat $CONF_FILE"
+
         sh "jenkins-jobs --conf $CONF_FILE --flush-cache update $JOBS_DIR"
     }
 }
