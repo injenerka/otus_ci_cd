@@ -1,3 +1,4 @@
+import groovy.transform.Field
 
 @Field
 def CONF_FILE = "${WORKSPACE}/config.ini"
